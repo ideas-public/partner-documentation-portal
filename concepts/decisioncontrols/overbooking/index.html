@@ -83,11 +83,11 @@
 <li>Overbooking values are always sent as a negative value to the receiving system.</li>
 <li>Room Type Overbooking values do not equal the Hotel Overbooking Values.</li>
 <li>Hotel Overbooking controls the overall availability of the total Hotel capacity.</li>
-<li>When both sets of Overbooking controls are sent to the Selling System, the House Overbooking limit is the Primary Rule for when hotel availability is closed once it is reached.</li>
+<li>When both sets of Overbooking controls are sent to the Selling System, the House Overbooking limit is the Primary Rule.</li>
 <li>Once Hotel Overbooking has been reached, the Hotel is closed for sale for the given occupancy date.</li>
 </ul>
 <h3 id="ideas-overbooking-calculation">IDeaS Overbooking Calculation</h3>
-<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.lb6kk.css"><script type="module" src="/_astro/ec.8zarh.js"></script><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">Physical Capacity – Negative Overbooking = Effective Capacity Effective Capacity – (Out of Order + Rooms Sold) = Available Capacity</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="Physical Capacity – Negative Overbooking = Effective Capacity Effective Capacity – (Out of Order + Rooms Sold) = Available Capacity"><div></div></button></div></figure></div>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.lb6kk.css"><script type="module" src="/_astro/ec.8zarh.js"></script><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">Physical Capacity – Negative Overbooking = Effective Capacity</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">Effective Capacity – (Out of Order + Rooms Sold) = Available Capacity</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="Physical Capacity – Negative Overbooking = Effective CapacityEffective Capacity – (Out of Order + Rooms Sold) = Available Capacity"><div></div></button></div></figure></div>
 <h3 id="overbooking-example">Overbooking Example</h3>
 <p>The table below shows overbooking values for four room types (RT) and the Total Hotel. These values are used throughout the examples.</p>
 <p><img alt="Overbooking example" width="337" height="120" loading="lazy" decoding="async" src="/_astro/overbooking-example.DbEUeCfm_Z2pKixR.webp" ></p>
