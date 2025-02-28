@@ -87,14 +87,14 @@
 <li><strong>Client ID and Client Secret:</strong>
 <ul>
 <li>IDeaS will issue a unique client_id and client_secret for your integration.</li>
-<li>Contact IDeaS support to request these credentials.</li>
+<li>Please register as an Integration Partner to request these credentials.</li>
 </ul>
 </li>
 <li><strong>Secure Delivery of Credentials:</strong>
 <ul>
 <li>Upon request, your client_id and client_secret will be sent to you through a secure
 email channel.</li>
-<li>Handle these credentials with care, as they are required for API authentication</li>
+<li>Handle these credentials with care, as they are required for API authentication.</li>
 </ul>
 </li>
 </ol>
@@ -125,7 +125,7 @@ acts as proof of authentication.</p>
 <p><strong>Authorization Outcome</strong>.</p>
 <ul>
 <li><strong>[Auth is passed]</strong>: If the token is valid and the client has permission to access the requested resources, the resource server responds with the requested data and an HTTP status code indicating success. Http status code should be from 2** family like 200, 201, 204.</li>
-<li><strong>[Auth is failed]</strong>: If the token is invalid, expired, or the client lacks the necessary permissions, the resource server responds with an empty body and an HTTP status code of 403 (Forbidden), indicating the client’s request is denied. If you don’t attach JWToken into Authorization header OAuth server responds with 401 Unauthorized HTTP  code</li>
+<li><strong>[Auth is failed]</strong>: If the token is invalid, expired, or the client lacks the necessary permissions, the resource server responds with an empty body and an HTTP status code of 403 (Forbidden), indicating the client’s request is denied. If you don’t attach JWToken into Authorization header OAuth server responds with 401 Unauthorized HTTP code.</li>
 </ul>
 </li>
 </ol>
@@ -134,5 +134,5 @@ acts as proof of authentication.</p>
 should be considered to ensure optimal performance and reliability:</p>
 <ol>
 <li><strong>Rate Limits</strong>: The API enforces rate limits to control the number of requests per second. If the request volume exceeds the allowed limit, requests will be throttled, and a 429 Rate Limit Exceeded HTTP response will be returned. Clients should implement a backoff and retry a mechanism to handle these responses gracefully.</li>
-<li><strong>Token Expiration</strong>: Access tokens issued by the authentication system have a limited lifespan. Tokens must be refreshed periodically to maintain access, and clients should handle token expiration logic to avoid interruptions in service</li>
+<li><strong>Token Expiration</strong>: Access tokens issued by the authentication system have a limited lifespan. Tokens must be refreshed periodically to maintain access, and clients should handle token expiration logic to avoid interruptions in service.</li>
 </ol> </div> <footer class="sl-flex astro-3yyafb3n"> <div class="meta sl-flex astro-3yyafb3n">   </div> <div class="pagination-links astro-u2l5gyhi" dir="ltr"> <a href="/overview/developerflow" rel="prev" class="astro-u2l5gyhi"> <svg aria-hidden="true" class="astro-u2l5gyhi astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg>  <span class="astro-u2l5gyhi"> Previous <br class="astro-u2l5gyhi"> <span class="link-title astro-u2l5gyhi">API Development Flow</span> </span> </a> <a href="/developer-guide/request/" rel="next" class="astro-u2l5gyhi"> <svg aria-hidden="true" class="astro-u2l5gyhi astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg>  <span class="astro-u2l5gyhi"> Next <br class="astro-u2l5gyhi"> <span class="link-title astro-u2l5gyhi">Request</span> </span> </a> </div>   </footer>  </div> </div>   </main> </div> </div>  </div> </div>  </body></html>
