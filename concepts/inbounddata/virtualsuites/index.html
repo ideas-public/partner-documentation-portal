@@ -1,0 +1,542 @@
+<!DOCTYPE html><html lang="en" dir="ltr" data-theme="dark" data-has-toc data-has-sidebar class="astro-bguv2lll"> <head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Virtual Suites | DEVELOPERS</title><link rel="canonical" href="https://developers.ideas.com/concepts/inbounddata/virtualsuites/"/><link rel="sitemap" href="/sitemap-index.xml"/><link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v5.1.2"/><meta name="generator" content="Starlight v0.30.3"/><meta property="og:title" content="Virtual Suites"/><meta property="og:type" content="article"/><meta property="og:url" content="https://developers.ideas.com/concepts/inbounddata/virtualsuites/"/><meta property="og:locale" content="en"/><meta property="og:description"/><meta property="og:site_name" content="DEVELOPERS"/><meta name="twitter:card" content="summary_large_image"/><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg> <svg aria-hidden="true" class="dark astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg> <svg aria-hidden="true" class="auto astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg> </template><link rel="stylesheet" href="/_astro/Route.CvNwQYHb.css">
+<style>[data-astro-image]{width:100%;height:auto;-o-object-fit:var(--fit);object-fit:var(--fit);-o-object-position:var(--pos);object-position:var(--pos);aspect-ratio:var(--w) / var(--h)}[data-astro-image=responsive]{max-width:calc(var(--w) * 1px);max-height:calc(var(--h) * 1px)}[data-astro-image=fixed]{width:calc(var(--w) * 1px);height:calc(var(--h) * 1px)}
+</style><script type="module" src="/_astro/page.7qqag-5g.js"></script></head> <body class="astro-bguv2lll"> <a href="#_top" class="astro-7q3lir66">Skip to content</a>  <div class="page sl-flex astro-vrdttmbt"> <header class="header astro-vrdttmbt"><div class="header sl-flex astro-kmkmnagf"> <div class="title-wrapper sl-flex astro-kmkmnagf"> <a href="/" class="site-title sl-flex astro-m46x6ez3">  <img class="light:sl-hidden astro-m46x6ez3" alt src="/_astro/ideas-logo.Cvp6-1kX.svg" width="145" height="52"> <img class="dark:sl-hidden astro-m46x6ez3" alt src="/_astro/ideas-logo.Cvp6-1kX.svg" width="145" height="52"> <span class="astro-m46x6ez3"> DEVELOPERS </span> </a>  </div> <div class="sl-flex astro-kmkmnagf"> <site-search class="astro-kmkmnagf astro-v37mnknz" data-translations="{&#34;placeholder&#34;:&#34;Search&#34;}"> <button data-open-modal disabled aria-label="Search" aria-keyshortcuts="Control+K" class="astro-v37mnknz"> <svg aria-hidden="true" class="astro-v37mnknz astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg>  <span class="sl-hidden md:sl-block astro-v37mnknz" aria-hidden="true">Search</span> <kbd class="sl-hidden md:sl-flex astro-v37mnknz" style="display: none;"> <kbd class="astro-v37mnknz">Ctrl</kbd><kbd class="astro-v37mnknz">K</kbd> </kbd> </button> <dialog style="padding:0" aria-label="Search" class="astro-v37mnknz"> <div class="dialog-frame sl-flex astro-v37mnknz">  <button data-close-modal class="sl-flex md:sl-hidden astro-v37mnknz"> Cancel </button> <div class="search-container astro-v37mnknz"> <div id="starlight__search" class="astro-v37mnknz"></div> </div> </div> </dialog> </site-search>  <script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script> <script type="module" src="/_astro/Search.astro_astro_type_script_index_0_lang.DUGuF8xP.js"></script>   </div> <div class="sl-hidden md:sl-flex right-group astro-kmkmnagf"> <div class="sl-flex social-icons astro-kmkmnagf"> <a href="https://www.linkedin.com/company/ideas-revenue-solutions" rel="me" class="sl-flex astro-wy4te6ga"><span class="sr-only astro-wy4te6ga">LinkedIn</span><svg aria-hidden="true" class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2ZM8.09 18.74h-3v-9h3v9ZM6.59 8.48a1.56 1.56 0 0 1 0-3.12 1.57 1.57 0 1 1 0 3.12Zm12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0 0 12.85 13a2 2 0 0 0-.1.73v5h-3v-9h3V11a3 3 0 0 1 2.71-1.5c2 0 3.45 1.29 3.45 4.06v5.18Z"/></svg> </a><a href="https://www.facebook.com/IDeaSRevenueSolutions/#" rel="me" class="sl-flex astro-wy4te6ga"><span class="sr-only astro-wy4te6ga">Facebook</span><svg aria-hidden="true" class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M20.9 2H3.1A1.1 1.1 0 0 0 2 3.1v17.8A1.1 1.1 0 0 0 3.1 22h9.58v-7.75h-2.6v-3h2.6V9a3.64 3.64 0 0 1 3.88-4 20.26 20.26 0 0 1 2.33.12v2.7H17.3c-1.26 0-1.5.6-1.5 1.47v1.93h3l-.39 3H15.8V22h5.1a1.1 1.1 0 0 0 1.1-1.1V3.1A1.1 1.1 0 0 0 20.9 2Z"/></svg> </a><a href="https://video.ideas.com/" rel="me" class="sl-flex astro-wy4te6ga"><span class="sr-only astro-wy4te6ga">YouTube</span><svg aria-hidden="true" class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M23.5 6.2A3 3 0 0 0 21.4 4c-1.9-.5-9.4-.5-9.4-.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.3C0 8 0 12 0 12s0 4 .5 5.8A3 3 0 0 0 2.6 20c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2c.5-2 .5-5.9.5-5.9s0-4-.5-5.8zm-14 9.4V8.4l6.3 3.6-6.3 3.6z"/></svg> </a> </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-4yphtoen"> <span class="sr-only astro-4yphtoen">Select theme</span> <svg aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg>  <select value="auto" autocomplete="off" class="astro-4yphtoen"> <option value="dark" class="astro-4yphtoen">Dark</option><option value="light" class="astro-4yphtoen">Light</option><option value="auto" selected class="astro-4yphtoen">Auto</option> </select> <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </label>  </starlight-theme-select>  <script>
+	StarlightThemeProvider.updatePickers();
+</script> <script type="module">const r="starlight-theme",o=e=>e==="auto"||e==="dark"||e==="light"?e:"auto",c=()=>o(typeof localStorage<"u"&&localStorage.getItem(r));function n(e){typeof localStorage<"u"&&localStorage.setItem(r,e==="light"||e==="dark"?e:"")}const l=()=>matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";function t(e){StarlightThemeProvider.updatePickers(e),document.documentElement.dataset.theme=e==="auto"?l():e,n(e)}matchMedia("(prefers-color-scheme: light)").addEventListener("change",()=>{c()==="auto"&&t("auto")});class s extends HTMLElement{constructor(){super(),t(c()),this.querySelector("select")?.addEventListener("change",a=>{a.currentTarget instanceof HTMLSelectElement&&t(o(a.currentTarget.value))})}}customElements.define("starlight-theme-select",s);</script> <script type="module">class s extends HTMLElement{constructor(){super();const e=this.querySelector("select");e&&(e.addEventListener("change",t=>{t.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=t.currentTarget.value)}),window.addEventListener("pageshow",t=>{if(!t.persisted)return;const n=e.querySelector("option[selected]")?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}}customElements.define("starlight-lang-select",s);</script> </div> </div> </header> <nav class="sidebar astro-vrdttmbt" aria-label="Main"> <starlight-menu-button class="astro-jif73yzw"> <button aria-expanded="false" aria-label="Menu" aria-controls="starlight__sidebar" class="sl-flex md:sl-hidden astro-jif73yzw"> <svg aria-hidden="true" class="astro-jif73yzw astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg>  </button> </starlight-menu-button> <script type="module">class s extends HTMLElement{constructor(){super(),this.btn=this.querySelector("button"),this.btn.addEventListener("click",()=>this.toggleExpanded());const t=this.closest("nav");t&&t.addEventListener("keyup",e=>this.closeOnEscape(e))}setExpanded(t){this.setAttribute("aria-expanded",String(t)),document.body.toggleAttribute("data-mobile-menu-expanded",t)}toggleExpanded(){this.setExpanded(this.getAttribute("aria-expanded")!=="true")}closeOnEscape(t){t.code==="Escape"&&(this.setExpanded(!1),this.btn.focus())}}customElements.define("starlight-menu-button",s);</script>   <div id="starlight__sidebar" class="sidebar-pane astro-vrdttmbt"> <div class="sidebar-content sl-flex astro-vrdttmbt"> <sl-sidebar-state-persist data-hash="0498wt1" class="astro-kku4brbg"> <script aria-hidden="true">
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script>  <ul class="top-level astro-3ii7xxms"> <li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="0"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Overview</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Introduction</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/overview/developerflow" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">API Development Flow</span>  </a> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="1"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Developer Guide</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/developer-guide/authentication/" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Authentication</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/developer-guide/request/" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Request</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/developer-guide/response/" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Response</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/developer-guide/testingcertification/" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Testing and Certification</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/developer-guide/xdata-frequency-guidelines/" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Data Frequency Guidelines for IDeaS RMS</span>  </a> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="2"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Concepts</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="4"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Inbound Data</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/concepts/inbounddata/1reservations/" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Reservations</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/concepts/inbounddata/groupblocks/" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Group Blocks</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/concepts/inbounddata/inventory/" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Inventory</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/concepts/inbounddata/virtualsuites/" aria-current="page" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Virtual Suites</span>  </a> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="5"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Decision Controls</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/concepts/decisioncontrols/1pricing/" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Pricing</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/concepts/decisioncontrols/lrv/" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Last Room Value</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/concepts/decisioncontrols/overbooking/" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Overbooking Controls</span>  </a> </li> </ul>  </details> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="3"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">API References and Examples</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <details class="astro-3ii7xxms"> <sl-sidebar-restore data-index="6"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Reservations</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/reservation-api/" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Overview</span>  </a> </li><li class="astro-3ii7xxms"> <details class="astro-3ii7xxms"> <sl-sidebar-restore data-index="10"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">IDeaSReservationV1</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/reservation-api/operations/savereservations" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">save reservations</span>  </a> </li> </ul>  </details> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details class="astro-3ii7xxms"> <sl-sidebar-restore data-index="7"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Groups</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/group-api/" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Overview</span>  </a> </li><li class="astro-3ii7xxms"> <details class="astro-3ii7xxms"> <sl-sidebar-restore data-index="11"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">IDeaSGroupBlockMasterV1</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/group-api/operations/savegroupblockmasters" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">save collection of group block masters</span>  </a> </li> </ul>  </details> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details class="astro-3ii7xxms"> <sl-sidebar-restore data-index="8"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Inventory</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/inventory-api/" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Overview</span>  </a> </li><li class="astro-3ii7xxms"> <details class="astro-3ii7xxms"> <sl-sidebar-restore data-index="12"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">IDeaSInventoryV1</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/inventory-api/operations/postinventoriesforaproperty" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Post inventories</span>  </a> </li> </ul>  </details> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details class="astro-3ii7xxms"> <sl-sidebar-restore data-index="9"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Trackers</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/tracker-api/" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Overview</span>  </a> </li><li class="astro-3ii7xxms"> <details class="astro-3ii7xxms"> <sl-sidebar-restore data-index="13"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Operations</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/tracker-api/operations/trackerstrackerid" aria-current="false" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Notify client of processing result</span>  </a> </li> </ul>  </details> </li> </ul>  </details> </li> </ul>  </details> </li> </ul>   <script aria-hidden="true">
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script> </sl-sidebar-state-persist>  <div class="md:sl-hidden"> <div class="mobile-preferences sl-flex astro-wu23bvmt"> <div class="sl-flex social-icons astro-wu23bvmt"> <a href="https://www.linkedin.com/company/ideas-revenue-solutions" rel="me" class="sl-flex astro-wy4te6ga"><span class="sr-only astro-wy4te6ga">LinkedIn</span><svg aria-hidden="true" class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2ZM8.09 18.74h-3v-9h3v9ZM6.59 8.48a1.56 1.56 0 0 1 0-3.12 1.57 1.57 0 1 1 0 3.12Zm12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0 0 12.85 13a2 2 0 0 0-.1.73v5h-3v-9h3V11a3 3 0 0 1 2.71-1.5c2 0 3.45 1.29 3.45 4.06v5.18Z"/></svg> </a><a href="https://www.facebook.com/IDeaSRevenueSolutions/#" rel="me" class="sl-flex astro-wy4te6ga"><span class="sr-only astro-wy4te6ga">Facebook</span><svg aria-hidden="true" class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M20.9 2H3.1A1.1 1.1 0 0 0 2 3.1v17.8A1.1 1.1 0 0 0 3.1 22h9.58v-7.75h-2.6v-3h2.6V9a3.64 3.64 0 0 1 3.88-4 20.26 20.26 0 0 1 2.33.12v2.7H17.3c-1.26 0-1.5.6-1.5 1.47v1.93h3l-.39 3H15.8V22h5.1a1.1 1.1 0 0 0 1.1-1.1V3.1A1.1 1.1 0 0 0 20.9 2Z"/></svg> </a><a href="https://video.ideas.com/" rel="me" class="sl-flex astro-wy4te6ga"><span class="sr-only astro-wy4te6ga">YouTube</span><svg aria-hidden="true" class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M23.5 6.2A3 3 0 0 0 21.4 4c-1.9-.5-9.4-.5-9.4-.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.3C0 8 0 12 0 12s0 4 .5 5.8A3 3 0 0 0 2.6 20c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2c.5-2 .5-5.9.5-5.9s0-4-.5-5.8zm-14 9.4V8.4l6.3 3.6-6.3 3.6z"/></svg> </a> </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-4yphtoen"> <span class="sr-only astro-4yphtoen">Select theme</span> <svg aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg>  <select value="auto" autocomplete="off" class="astro-4yphtoen"> <option value="dark" class="astro-4yphtoen">Dark</option><option value="light" class="astro-4yphtoen">Light</option><option value="auto" selected class="astro-4yphtoen">Auto</option> </select> <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </label>  </starlight-theme-select>  <script>
+	StarlightThemeProvider.updatePickers();
+</script>   </div>  </div> </div> </div> </nav> <div class="main-frame astro-vrdttmbt">  <script type="module">const a=document.getElementById("starlight__sidebar"),n=a?.querySelector("sl-sidebar-state-persist"),o="sl-sidebar-state",i=()=>{let t=[];const e=n?.dataset.hash||"";try{const s=sessionStorage.getItem(o),r=JSON.parse(s||"{}");Array.isArray(r.open)&&r.hash===e&&(t=r.open)}catch{}return{hash:e,open:t,scroll:a?.scrollTop||0}},c=t=>{try{sessionStorage.setItem(o,JSON.stringify(t))}catch{}},d=()=>c(i()),l=(t,e)=>{const s=i();s.open[e]=t,c(s)};n?.addEventListener("click",t=>{if(!(t.target instanceof Element))return;const e=t.target.closest("summary")?.closest("details");if(!e)return;const s=e.querySelector("sl-sidebar-restore"),r=parseInt(s?.dataset.index||"");isNaN(r)||l(!e.open,r)});addEventListener("visibilitychange",()=>{document.visibilityState==="hidden"&&d()});addEventListener("pageHide",d);</script> <div class="lg:sl-flex astro-67yu43on"> <aside class="right-sidebar-container astro-67yu43on"> <div class="right-sidebar astro-67yu43on"> <div class="lg:sl-hidden astro-pb3aqygn"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-doynk5tl"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-doynk5tl"><details id="starlight__mobile-toc" class="astro-doynk5tl"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-doynk5tl"><div class="toggle sl-flex astro-doynk5tl">On this page<svg aria-hidden="true" class="caret astro-doynk5tl astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg> </div><span class="display-current astro-doynk5tl"></span></summary><div class="dropdown astro-doynk5tl"><ul class="isMobile astro-g2bywc46" style="--depth: 0;"> <li class="astro-g2bywc46" style="--depth: 0;"> <a href="#_top" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">Overview</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#example-scenario" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">Example Scenario</span> </a> <ul class="isMobile astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#rooms-configuration" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Rooms Configuration</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#reservations-scenario" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Reservations Scenario</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#group-blocks-scenario" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Group Blocks Scenario</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#rooms-out-of-service-scenario" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Rooms Out of Service Scenario</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#inventory-reporting-scenario" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Inventory Reporting Scenario</span> </a>  </li> </ul>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#pmscrs-publishing-requirements" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">PMS/CRS Publishing Requirements</span> </a> <ul class="isMobile astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#reservations" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Reservations</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#group-blocks" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Group Blocks</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#rates" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Rates</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#inventory-out-of-order-by-room-number" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Inventory Out of Order by Room Number</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#inventory-out-of-order-by-room-number-handling" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Inventory Out of Order by Room Number Handling</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#inventory-reporting-including-virtual-suites" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Inventory Reporting Including Virtual Suites</span> </a>  </li> </ul>  </li> </ul> </div></details></nav></mobile-starlight-toc><script type="module" src="/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.C181hMzK.js"></script></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-pb3aqygn"><div class="sl-container astro-pb3aqygn"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">On this page</h2><ul class="astro-g2bywc46" style="--depth: 0;"> <li class="astro-g2bywc46" style="--depth: 0;"> <a href="#_top" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">Overview</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#example-scenario" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">Example Scenario</span> </a> <ul class="astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#rooms-configuration" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Rooms Configuration</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#reservations-scenario" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Reservations Scenario</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#group-blocks-scenario" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Group Blocks Scenario</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#rooms-out-of-service-scenario" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Rooms Out of Service Scenario</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#inventory-reporting-scenario" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Inventory Reporting Scenario</span> </a>  </li> </ul>  </li><li class="astro-g2bywc46" style="--depth: 0;"> <a href="#pmscrs-publishing-requirements" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">PMS/CRS Publishing Requirements</span> </a> <ul class="astro-g2bywc46" style="--depth: 1;"> <li class="astro-g2bywc46" style="--depth: 1;"> <a href="#reservations" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Reservations</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#group-blocks" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Group Blocks</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#rates" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Rates</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#inventory-out-of-order-by-room-number" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Inventory Out of Order by Room Number</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#inventory-out-of-order-by-room-number-handling" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Inventory Out of Order by Room Number Handling</span> </a>  </li><li class="astro-g2bywc46" style="--depth: 1;"> <a href="#inventory-reporting-including-virtual-suites" class="astro-g2bywc46" style="--depth: 1;"> <span class="astro-g2bywc46" style="--depth: 1;">Inventory Reporting Including Virtual Suites</span> </a>  </li> </ul>  </li> </ul> </nav></starlight-toc><script type="module" src="/_astro/TableOfContents.astro_astro_type_script_index_0_lang.CKWWgpjV.js"></script></div></div> </div> </aside> <div class="main-pane astro-67yu43on">  <main data-pagefind-body="true" lang="en" dir="ltr" class="astro-bguv2lll">    <div class="content-panel astro-7nkwcw3z"> <div class="sl-container astro-7nkwcw3z"> <h1 id="_top" class="astro-j6tvhyss">Virtual Suites</h1>  </div> </div>  <div class="content-panel astro-7nkwcw3z"> <div class="sl-container astro-7nkwcw3z"> <div class="sl-markdown-content"> <h1 id="virtual-suites">Virtual Suites</h1>
+<p>Some PMS/CRS systems enable hotels to create and offer room types known as Component Rooms, Composite Suites, or Virtual Suites. These room types consist of two or more Physical Room Types, also referred to as component room parts, which can be sold individually or together as part of a Virtual Suite. Additionally, multiple Virtual Suites can be combined to create larger suites, such as using two Virtual Suite room types to define a larger suite.</p>
+<p><em>Two Simple Virtual Suite Scenarios</em></p>
+<p><img alt="Two Simple Virtual Suite Scenarios" width="2122" height="440" loading="lazy" decoding="async" src="/_astro/TwoSimpleComponentRoomSecnarios.D2xYQ5tj_IFpQC.webp" >
+In the above example:</p>
+<ul>
+<li>1 King + 1 Double = King Suite</li>
+<li>2 Double + 1 Queen = Queen Suite</li>
+</ul>
+<hr>
+<p><em>Combined Suite Scenario</em></p>
+<p><img alt="Combned Suite Scenario" width="2186" height="641" loading="lazy" decoding="async" src="/_astro/CombinedSuitesScenario.CqUbxI09_Z159acg.webp" ></p>
+<blockquote>
+<p>The above example combines the Two Simple Virtual Suite Scenarios, King Suite + Queen Suite = Presidential Suite.</p>
+</blockquote>
+<p>From both scenarios, the King, Double and Queen are the Physical Room Types, where the King Suite, Queen Suite and Presidential Suite are types of virtual rooms.</p>
+<p>Complex structures such as the Combined Suites Secnarios above could cause discrepancies to be present in IDeaS RMS if not handled correctly when reporting. Discrepancies may create confusion concerning the number fo rooms truly sold on any given occupancy date, affecting yield calculations.</p>
+<h2 id="example-scenario">Example Scenario</h2>
+<p>The below example will be used through the documentation to explain the requirements to support Virtual Suite integration requirements.</p>
+<p><strong>Scenario Details:</strong></p>
+<p>Occupancy dates: 25 - 28 October</p>
+<ul>
+<li>Total hotel capacity = 38 rooms</li>
+<li>38 Physical Room Types</li>
+<li>1 Virtual Suite</li>
+<li>7 Reservations</li>
+<li>1 Group Block</li>
+<li>5 Rooms Out of Order (not available for sale)</li>
+</ul>
+<h3 id="rooms-configuration">Rooms Configuration</h3>
+<ul>
+<li>KING (Physical Room Type) Capacity = 11</li>
+<li>QUEEN (Physical Room Type) Capacity = 7. NOTE: All 7 rooms can be sold individually or as part of SUITE.</li>
+<li>DOUBLE (Physical Room Type) Capacity 20.  NOTE: 14 specific rooms can be sold individually or as part of SUITE.  Remaining 6 are not associated to SUITE.</li>
+<li>SUITE (Virtual Suite) Capacity 7 made up of 1 QUEEN + 2 DOUBLE</li>
+</ul>
+<blockquote>
+<p>Note all QUEEN rooms belong to SUITE, but not all DOUBLE rooms belong to SUITE.</p>
+</blockquote>
+<p>The DOUBLE rooms that are part of SUITE are: 1101, 1102, 1103, 1104, 1105, 1106, 1107, 1108, 1109, 1110, 1111, 1112, 1201, 1202, 1203, 1204, 1205, 1206, 1207, 1208, 1209.
+The DOUBLE rooms that are not part of SUITE: 1210, 1211, 1212, 1213, 1214, 1215.</p>
+<p>The SUITE rooms are: S1102, S1105, S1108, S1111, S1202, S1205, and S1208.</p>
+<h3 id="reservations-scenario">Reservations Scenario</h3>
+<p>There are 7 reservations as highlighted below. The reservation details are broken down in Table 1: Example Scenario Reservations below.</p>
+<ul>
+<li>3 SUITE</li>
+<li>1 QUEEN (affecting availability of SUITE)</li>
+<li>2 DOUBLE (one affecting availability of SUITE)</li>
+<li>1 KING (no effect on SUITE)</li>
+</ul>
+<p><em>Table 1: Example Scenario Reservations</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="center">ReservationID</th><th align="center">Status</th><th align="center">Arrival</th><th align="center">Depart</th><th align="center">RMTYPE</th><th align="center">RatePlan</th><th align="center">MKTSEG</th><th align="center">RM#</th><th align="center">NetRate</th><th align="center">GroupCode</th><th align="center">Adults</th><th align="center">Children</th></tr></thead><tbody><tr><td align="center">8010003</td><td align="center">In_House</td><td align="center">25-Oct</td><td align="center">27-Oct</td><td align="center">SUITE</td><td align="center">SPKG</td><td align="center">PKG</td><td align="center">S1105</td><td align="center">$ 425.00</td><td align="center">-</td><td align="center">3</td><td align="center">3</td></tr><tr><td align="center">8010004</td><td align="center">In-House</td><td align="center">25-Oct</td><td align="center">28-Oct</td><td align="center">DOUBLE</td><td align="center">DAILY</td><td align="center">UNQ</td><td align="center">1214</td><td align="center">$ 155.00</td><td align="center">-</td><td align="center">1</td><td align="center">0</td></tr><tr><td align="center">8010006</td><td align="center">Cancelled</td><td align="center">25-Oct</td><td align="center">28-Oct</td><td align="center">SUITE</td><td align="center">DAILY</td><td align="center">UNQ</td><td align="center">S1208</td><td align="center">$ 555.00</td><td align="center">-</td><td align="center">2</td><td align="center">4</td></tr><tr><td align="center">8010007</td><td align="center">No_Show</td><td align="center">25-Oct</td><td align="center">26-Oct</td><td align="center">SUITE</td><td align="center">AAA</td><td align="center">DSC</td><td align="center">S1102</td><td align="center">$ 450.00</td><td align="center">-</td><td align="center">4</td><td align="center">0</td></tr><tr><td align="center">8010001</td><td align="center">Reserved</td><td align="center">26-Oct</td><td align="center">28-Oct</td><td align="center">KING</td><td align="center">CRVS001</td><td align="center">GRP</td><td align="center">1115</td><td align="center">$ 135.00</td><td align="center">CRVS1911</td><td align="center">2</td><td align="center">0</td></tr><tr><td align="center">8010002</td><td align="center">Reserved</td><td align="center">26-Oct</td><td align="center">28-Oct</td><td align="center">DOUBLE</td><td align="center">AAA</td><td align="center">DSC</td><td align="center">1201</td><td align="center">$ 165.00</td><td align="center">-</td><td align="center">1</td><td align="center">1</td></tr><tr><td align="center">8010005</td><td align="center">Reserved</td><td align="center">27-Oct</td><td align="center">28-Oct</td><td align="center">QUEEN</td><td align="center">TPKG</td><td align="center">PKG</td><td align="center">1202</td><td align="center">$ 160.00</td><td align="center">-</td><td align="center">2</td><td align="center">0</td></tr></tbody></table>
+<blockquote>
+<p>NOTE: Reservations 80100002 and 8010005 affect SUITE availability where as 810004 does not.</p>
+</blockquote>
+<h3 id="group-blocks-scenario">Group Blocks Scenario</h3>
+<p>There is one group block arriving on the 26th and departing on the 28th. Group block details are broken down in Table 2: Example Scenario Group Blocks below.</p>
+<ul>
+<li>Group Block Code CRVS1911</li>
+<li>1 SUITE blocked for the first night only.</li>
+<li>Physical Room Types blocked for both nights.</li>
+</ul>
+<p><em>Table 2: Example Scenario Group Blocks</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="center">Date</th><th align="left">RMTYPE</th><th align="center">Block</th><th align="center">Pickup</th><th align="center">Rate1</th><th align="center">Rate2</th></tr></thead><tbody><tr><td align="center">26-Oct</td><td align="left">KING</td><td align="center">2</td><td align="center">1</td><td align="center">$ 135.00</td><td align="center">$ 135.00</td></tr><tr><td align="center">26-Oct</td><td align="left">QUEEN</td><td align="center">2</td><td align="center">0</td><td align="center">$ 130.00</td><td align="center">$ 145.00</td></tr><tr><td align="center">26-Oct</td><td align="left">DOUBLE</td><td align="center">2</td><td align="center">0</td><td align="center">$ 120.00</td><td align="center">$ 130.00</td></tr><tr><td align="center">26-Oct</td><td align="left">SUITE</td><td align="center">1</td><td align="center">0</td><td align="center">$ 370.00</td><td align="center">$ 370.00</td></tr><tr><td align="center">27-Oct</td><td align="left">KING</td><td align="center">2</td><td align="center">1</td><td align="center">$ 135.00</td><td align="center">$ 135.00</td></tr><tr><td align="center">27-Oct</td><td align="left">QUEEN</td><td align="center">2</td><td align="center">0</td><td align="center">$ 130.00</td><td align="center">$ 145.00</td></tr><tr><td align="center">27-Oct</td><td align="left">DOUBLE</td><td align="center">2</td><td align="center">0</td><td align="center">$ 120.00</td><td align="center">$ 130.00</td></tr></tbody></table>
+<h3 id="rooms-out-of-service-scenario">Rooms Out of Service Scenario</h3>
+<p>This scenario assumes the partner system supports placing a Virtual Suite Out of Order. There are 5 rooms Out of Order.  Full details are provide in Table 3: Example Scenario Rooms Out of Service.</p>
+<ul>
+<li>1 SUITE</li>
+<li>2 DOUBLE (one affecting availability of SUITE)</li>
+<li>1 QUEEN (affecting availability of SUITE)</li>
+<li>1 KING (no effect on SUITE)</li>
+</ul>
+<p><em>Table 3: Example Scenario Rooms Out of Service</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">RMTYPE</th><th align="center">RM#</th><th align="center">25-Oct</th><th align="center">26-Oct</th><th align="center">27-Oct</th><th align="center">28-Oct</th><th align="center">29-Oct</th></tr></thead><tbody><tr><td align="left">SUITE</td><td align="center">S1205</td><td align="center">OOO</td><td align="center"><strong>OOO</strong></td><td align="center"><strong>OOO</strong></td><td align="center">-</td><td align="center">-</td></tr><tr><td align="left">DOUBLE</td><td align="center">1206</td><td align="center">-</td><td align="center">OOO</td><td align="center">-</td><td align="center">-</td><td align="center">-</td></tr><tr><td align="left">QUEEN</td><td align="center">1205</td><td align="center">-</td><td align="center">-</td><td align="center">OOO</td><td align="center">-</td><td align="center">-</td></tr><tr><td align="left">KING</td><td align="center">1113</td><td align="center">-</td><td align="center">OOO</td><td align="center">OOO</td><td align="center">OOO</td><td align="center">-</td></tr><tr><td align="left">DOUBLE</td><td align="center">1215</td><td align="center">-</td><td align="center">-</td><td align="center">-</td><td align="center">OOO</td><td align="center">OOO</td></tr></tbody></table>
+<h3 id="inventory-reporting-scenario">Inventory Reporting Scenario</h3>
+<p>Based on the example scenarios of the reservations, group block and maintenance scenarios, inventory would be provided as outlined below:</p>
+<p><em>Rooms Solds using Reservations and Group Block Examples</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">RMTYPE</th><th align="center">25-Oct</th><th align="center">26-Oct</th><th align="center">27-Oct</th><th align="center">28-Oct</th><th align="center">29-Oct</th></tr></thead><tbody><tr><td align="left">SUITE</td><td align="center">1</td><td align="center">2</td><td align="center">0</td><td align="center">0</td><td align="center">0</td></tr><tr><td align="left">DOUBLE</td><td align="center">3</td><td align="center">8</td><td align="center">4</td><td align="center">0</td><td align="center">0</td></tr><tr><td align="left">QUEEN</td><td align="center">1</td><td align="center">4</td><td align="center">3</td><td align="center">0</td><td align="center">0</td></tr><tr><td align="left">KING</td><td align="center">0</td><td align="center">2</td><td align="center">1</td><td align="center">0</td><td align="center">0</td></tr></tbody></table>
+<blockquote>
+<p>Due to SUITE being sold under reservations and groups, KING and DOUBLE solds are also reported to support the solds of the physical room parts of the Virtual Suite.</p>
+</blockquote>
+<p><em>Out of Order using Maintenance Example</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">RMTYPE</th><th align="center">25-Oct</th><th align="center">26-Oct</th><th align="center">27-Oct</th><th align="center">28-Oct</th><th align="center">29-Oct</th></tr></thead><tbody><tr><td align="left">SUITE</td><td align="center">1</td><td align="center">1</td><td align="center">1</td><td align="center">0</td><td align="center">0</td></tr><tr><td align="left">DOUBLE</td><td align="center">0</td><td align="center">1</td><td align="center">0</td><td align="center">1</td><td align="center">1</td></tr><tr><td align="left">QUEEN</td><td align="center">0</td><td align="center">0</td><td align="center">1</td><td align="center">0</td><td align="center">0</td></tr><tr><td align="left">KING</td><td align="center">0</td><td align="center">1</td><td align="center">1</td><td align="center">1</td><td align="center">0</td></tr></tbody></table>
+<p>Due to KING and DOUBLE being Out of Order, the SUITE is also set to Out of Order.</p>
+<h2 id="pmscrs-publishing-requirements">PMS/CRS Publishing Requirements</h2>
+<p>To address data discrepancies, it is essential to provide data that meets requirements designed for the IDeaS G3-RMS Component Rooms module. Supplying accurate data enables the property to benefit from precise demand forecasting and automated pricing controls for all room types.</p>
+<h3 id="reservations">Reservations</h3>
+<p>Reservations are eported with the room type booked by the Guest, whether Physical Room Type or Virtual Suite.  In case of Virtual Suite, the following requirements apply:</p>
+<ul>
+<li>Reservation room type code is assigned to Virtual Suite.</li>
+<li>Reservation API field <code dir="auto">numberOfRooms</code> represents the number of rooms for that room type sold.  It does not reflect the number of physical parts which make up the Virtual Suite.</li>
+<li>Rate values represent the nightly rate of the Virtual Suite.</li>
+<li>If system supports booking multi-unit reservations or share reservations for Virtual Suites, please discuss with IDeaS Integration Specialist to complete additional testing, to ensure data is handled and processed correctly by IDeaS RMS.</li>
+</ul>
+<h3 id="group-blocks">Group Blocks</h3>
+<p>Group blocks should be reported with the room types blocked/picked up, whether Virtual Suite or Physical Room Type.  In case of Virtual Suite(s) are included in group block, the following requirements apply:</p>
+<ul>
+<li>Report correct number of block and pick up count, based on the Physical Room Type or Virtual Suite.</li>
+<li>Do not report the Physical Room Type parts of a Virtual Suite as part of the block or pick up counts.
+<ul>
+<li>Exception would be if the group has also contracted for the Physical Room Type parts separately.</li>
+</ul>
+</li>
+</ul>
+<h3 id="rates">Rates</h3>
+<p>Rate messages should include all room types defined for the rate plan, whether Physical Room Type or Virtual Suite. If a rate plan is defined for a Virtual Suite, the expectation is the rate defined in the PMS/CRS will reflect the nightly rate of the Virtual Suite, and not the physical units making up the suite.</p>
+<h3 id="inventory-out-of-order-by-room-number">Inventory Out of Order by Room Number</h3>
+<p>The purpose of providing Inventory Out of Order by Room Number, is to help support Clients who have many Virtual Suites within their Hotel.  This provides the ability to auto report when a Physical Room Type associated with a Virtual Suite is Out of Order to IDeaS RMS to identify accurate reporting of the Virtual Suites.</p>
+<p>The DOUBLE rooms as part of the SUITE in Example Scenario demonstrates that when only some rooms of a particular type are included in a virtual room type, relying solely on the room type level data is insufficient for accurately determining virtual room type availability. Instead, room-specific information by room number is required for precise identification.</p>
+<h3 id="inventory-out-of-order-by-room-number-handling">Inventory Out of Order by Room Number Handling</h3>
+<p>Inventory Out of Order by room number should report;</p>
+<ul>
+<li>Entry by occupancy date for each room type code, room number and whether room is Out of Order is due to service request or not available for sale.</li>
+<li>Should be provided at cold-start as mirror of the same Past and Future Days Window as Inventory.</li>
+<li>Post cold-start submission from [PMS System Date] + Future Days Window.</li>
+</ul>
+<p><em>Example Inventory Out of Order JSON Message</em></p>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.lb6kk.css"><script type="module" src="/_astro/ec.8zarh.js"></script><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="json"><code><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">[</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">  </span></span><span style="--0:#D6DEEB;--1:#403F53">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"clientCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">TESTCLIENT</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"propertyCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">TESTHOTELCODE</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"createDateTime"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">2025-02-14T00:05:00Z</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"occupancyDate"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">2025-10-25</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomTypeCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">SUITE</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomNumber"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">S1205</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomsNotAvailableMaintenance"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">1</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomsNotAvailableOther"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">0</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">  </span></span><span style="--0:#D6DEEB;--1:#403F53">},</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">  </span></span><span style="--0:#D6DEEB;--1:#403F53">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"clientCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">TESTCLIENT</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"propertyCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">TESTHOTELCODE</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"createDateTime"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">2025-02-15T00:05:00Z</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"occupancyDate"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">2025-10-26</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomTypeCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">DOUBLE</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomNumber"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">1206</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomsNotAvailableMaintenance"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">1</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomsNotAvailableOther"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">0</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">  </span></span><span style="--0:#D6DEEB;--1:#403F53">},</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">  </span></span><span style="--0:#D6DEEB;--1:#403F53">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"clientCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">TESTCLIENT</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"propertyCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">TESTHOTELCODE</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"createDateTime"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">2025-02-16T00:05:00Z</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"occupancyDate"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">2025-10-25</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomTypeCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">QUEEN</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomNumber"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">1205</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomsNotAvailableMaintenance"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">1</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomsNotAvailableOther"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">0</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">  </span></span><span style="--0:#D6DEEB;--1:#403F53">},</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">    </span></span><span style="--0:#D6DEEB;--1:#403F53">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"clientCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">TESTCLIENT</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"propertyCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">TESTHOTELCODE</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"createDateTime"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">2025-02-16T00:05:00Z</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"occupancyDate"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">2025-10-26</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomTypeCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">QUEEN</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomNumber"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">1205</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomsNotAvailableMaintenance"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">1</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomsNotAvailableOther"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">0</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">  </span></span><span style="--0:#D6DEEB;--1:#403F53">}</span></div></div><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">]</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="[  {    &#x22;clientCode&#x22;: &#x22;TESTCLIENT&#x22;,    &#x22;propertyCode&#x22;: &#x22;TESTHOTELCODE&#x22;,    &#x22;createDateTime&#x22;: &#x22;2025-02-14T00:05:00Z&#x22;,    &#x22;occupancyDate&#x22;: &#x22;2025-10-25&#x22;,    &#x22;roomTypeCode&#x22;: &#x22;SUITE&#x22;,    &#x22;roomNumber&#x22;: &#x22;S1205&#x22;,    &#x22;roomsNotAvailableMaintenance&#x22;: 1,    &#x22;roomsNotAvailableOther&#x22;: 0  },  {    &#x22;clientCode&#x22;: &#x22;TESTCLIENT&#x22;,    &#x22;propertyCode&#x22;: &#x22;TESTHOTELCODE&#x22;,    &#x22;createDateTime&#x22;: &#x22;2025-02-15T00:05:00Z&#x22;,    &#x22;occupancyDate&#x22;: &#x22;2025-10-26&#x22;,    &#x22;roomTypeCode&#x22;: &#x22;DOUBLE&#x22;,    &#x22;roomNumber&#x22;: &#x22;1206&#x22;,    &#x22;roomsNotAvailableMaintenance&#x22;: 1,    &#x22;roomsNotAvailableOther&#x22;: 0  },  {    &#x22;clientCode&#x22;: &#x22;TESTCLIENT&#x22;,    &#x22;propertyCode&#x22;: &#x22;TESTHOTELCODE&#x22;,    &#x22;createDateTime&#x22;: &#x22;2025-02-16T00:05:00Z&#x22;,    &#x22;occupancyDate&#x22;: &#x22;2025-10-25&#x22;,    &#x22;roomTypeCode&#x22;: &#x22;QUEEN&#x22;,    &#x22;roomNumber&#x22;: &#x22;1205&#x22;,    &#x22;roomsNotAvailableMaintenance&#x22;: 1,    &#x22;roomsNotAvailableOther&#x22;: 0  },    {    &#x22;clientCode&#x22;: &#x22;TESTCLIENT&#x22;,    &#x22;propertyCode&#x22;: &#x22;TESTHOTELCODE&#x22;,    &#x22;createDateTime&#x22;: &#x22;2025-02-16T00:05:00Z&#x22;,    &#x22;occupancyDate&#x22;: &#x22;2025-10-26&#x22;,    &#x22;roomTypeCode&#x22;: &#x22;QUEEN&#x22;,    &#x22;roomNumber&#x22;: &#x22;1205&#x22;,    &#x22;roomsNotAvailableMaintenance&#x22;: 1,    &#x22;roomsNotAvailableOther&#x22;: 0  }]"><div></div></button></div></figure></div>
+<h3 id="inventory-reporting-including-virtual-suites">Inventory Reporting Including Virtual Suites</h3>
+<p>Changes will be required to support the implementation of Inventory Reporting to include Virtual Suites.  Requirements are outlined below to support both physical rooms types and Virtual Suites.</p>
+<ul>
+<li>Report Capacity, Solds and Out of Order, Out of Service details for Physical Room Types under <code dir="auto">roomTypeInventories</code> array.</li>
+<li>Report Capacity, Solds and Out of Order, Out of Service details for Virtual Suites types under <code dir="auto">virtualRoomTypeInventories</code> array.</li>
+<li>Where Virtual Suite(s) are sold, Physical Room Types associated to the Virtual Suite should also report as sold.</li>
+<li>Where Physical Room Type is part of a SUITE is placed Out of Order/Service, the Virtual Suite should also report as Out of Order.</li>
+<li>Depending on PMS functionality, placing a Virtual Suite(s) Out of Order/Service, may potentially impact the reporting of the  Physical Room Types associated to the Virtual Suite.  In which case, reporting of both Virtual Suite and Physical Room Types should be reported as Out of Order/Service.</li>
+</ul>
+<blockquote>
+<p>Rooms Out of Order, not available for sale = <code dir="auto">roomsNotAvailableMaintenance</code>.<br>
+Rooms Out of Service, available for sale = <code dir="auto">roomsNotAvailableOther</code>.</p>
+</blockquote>
+<p><em>Example Inventory Including Virtual Suites JSON Message</em></p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="json"><code><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">[</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">  </span></span><span style="--0:#D6DEEB;--1:#403F53">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"clientCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">TESTCLIENT</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"propertyCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">TESTHOTELCODE</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"createDateTime"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">2025-10-22T04:35:19.906Z</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"occupancyDate"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">2025-10-26</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"correlationId"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">11292d1b6-55c8-4c84-a09c-7bb74403d156</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"roomTypeInventories"</span><span style="--0:#D6DEEB;--1:#403F53">: [</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">      </span></span><span style="--0:#D6DEEB;--1:#403F53">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomTypeCapacity"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">11</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomsNotAvailableMaintenance"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">1</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomsNotAvailableOther"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">0</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomsSold"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">2</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomTypeCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">KING</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"transientSold"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">1</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"groupSold"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">1</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">      </span></span><span style="--0:#D6DEEB;--1:#403F53">},</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">      </span></span><span style="--0:#D6DEEB;--1:#403F53">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomTypeCapacity"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">7</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomsNotAvailableMaintenance"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">0</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomsNotAvailableOther"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">0</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomsSold"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">4</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomTypeCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">QUEEN</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"transientSold"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">1</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"groupSold"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">3</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">      </span></span><span style="--0:#D6DEEB;--1:#403F53">},</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">            </span></span><span style="--0:#D6DEEB;--1:#403F53">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomTypeCapacity"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">20</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomsNotAvailableMaintenance"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">1</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomsNotAvailableOther"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">0</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomsSold"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">8</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomTypeCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">DOUBLE</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"transientSold"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">4</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"groupSold"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">4</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">      </span></span><span style="--0:#D6DEEB;--1:#403F53">}</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">    </span></span><span style="--0:#D6DEEB;--1:#403F53">],</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#7FDBCA;--1:#097174">"virtualRoomTypeInventories"</span><span style="--0:#D6DEEB;--1:#403F53">: [</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">      </span></span><span style="--0:#D6DEEB;--1:#403F53">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomTypeCapacity"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">7</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomsNotAvailableMaintenance"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">1</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomsNotAvailableOther"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">0</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomsSold"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">2</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"roomTypeCode"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C789D6;--1:#7F5889">SUITE</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"transientSold"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">1</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#7FDBCA;--1:#097174">"groupSold"</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">1</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">      </span></span><span style="--0:#D6DEEB;--1:#403F53">}</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">    </span></span><span style="--0:#D6DEEB;--1:#403F53">]</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#D6DEEB;--1:#403F53">  </span></span><span style="--0:#D6DEEB;--1:#403F53">},</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="[  {    &#x22;clientCode&#x22;: &#x22;TESTCLIENT&#x22;,    &#x22;propertyCode&#x22;: &#x22;TESTHOTELCODE&#x22;,    &#x22;createDateTime&#x22;: &#x22;2025-10-22T04:35:19.906Z&#x22;,    &#x22;occupancyDate&#x22;: &#x22;2025-10-26&#x22;,    &#x22;correlationId&#x22;: &#x22;11292d1b6-55c8-4c84-a09c-7bb74403d156&#x22;,    &#x22;roomTypeInventories&#x22;: [      {        &#x22;roomTypeCapacity&#x22;: 11,        &#x22;roomsNotAvailableMaintenance&#x22;: 1,        &#x22;roomsNotAvailableOther&#x22;: 0,        &#x22;roomsSold&#x22;: 2,        &#x22;roomTypeCode&#x22;: &#x22;KING&#x22;,        &#x22;transientSold&#x22;: 1,        &#x22;groupSold&#x22;: 1      },      {        &#x22;roomTypeCapacity&#x22;: 7,        &#x22;roomsNotAvailableMaintenance&#x22;: 0,        &#x22;roomsNotAvailableOther&#x22;: 0,        &#x22;roomsSold&#x22;: 4,        &#x22;roomTypeCode&#x22;: &#x22;QUEEN&#x22;,        &#x22;transientSold&#x22;: 1,        &#x22;groupSold&#x22;: 3      },            {        &#x22;roomTypeCapacity&#x22;: 20,        &#x22;roomsNotAvailableMaintenance&#x22;: 1,        &#x22;roomsNotAvailableOther&#x22;: 0,        &#x22;roomsSold&#x22;: 8,        &#x22;roomTypeCode&#x22;: &#x22;DOUBLE&#x22;,        &#x22;transientSold&#x22;: 4,        &#x22;groupSold&#x22;: 4      }    ],    &#x22;virtualRoomTypeInventories&#x22;: [      {        &#x22;roomTypeCapacity&#x22;: 7,        &#x22;roomsNotAvailableMaintenance&#x22;: 1,        &#x22;roomsNotAvailableOther&#x22;: 0,        &#x22;roomsSold&#x22;: 2,        &#x22;roomTypeCode&#x22;: &#x22;SUITE&#x22;,        &#x22;transientSold&#x22;: 1,        &#x22;groupSold&#x22;: 1      }    ]  },"><div></div></button></div></figure></div> </div> <footer class="sl-flex astro-3yyafb3n"> <div class="meta sl-flex astro-3yyafb3n">   </div> <div class="pagination-links astro-u2l5gyhi" dir="ltr"> <a href="/concepts/inbounddata/inventory/" rel="prev" class="astro-u2l5gyhi"> <svg aria-hidden="true" class="astro-u2l5gyhi astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg>  <span class="astro-u2l5gyhi"> Previous <br class="astro-u2l5gyhi"> <span class="link-title astro-u2l5gyhi">Inventory</span> </span> </a> <a href="/concepts/decisioncontrols/1pricing/" rel="next" class="astro-u2l5gyhi"> <svg aria-hidden="true" class="astro-u2l5gyhi astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg>  <span class="astro-u2l5gyhi"> Next <br class="astro-u2l5gyhi"> <span class="link-title astro-u2l5gyhi">Pricing</span> </span> </a> </div>   </footer>  </div> </div>   </main> </div> </div>  </div> </div>  </body></html>
