@@ -1,0 +1,87 @@
+name,ring,quadrant,isNew,description,next steps
+Java,adopt,languages & frameworks,FALSE,In the wiki/refarch/modules (Version Eclipse Temurin 21),When should we target Java 25 (released in Sept 25)?
+Node/Typescript,adopt,languages & frameworks,FALSE,In the wiki/refarch/modules (Version 24),
+Python,adopt,languages & frameworks,FALSE,In the wiki/refarch/modules (Version 3.14),
+Spring,adopt,languages & frameworks,FALSE,In the wiki/refarch/modules,
+SQL,adopt,languages & frameworks,FALSE,In the wiki/refarch/modules,
+Swift,adopt,languages & frameworks,FALSE,In the wiki/refarch/modules,
+Terraform,adopt,languages & frameworks,FALSE,In the wiki/refarch/modules,
+Angular,adopt,languages & frameworks,FALSE,In the wiki/refarch/modules,
+Redis,adopt,languages & frameworks,FALSE,In the wiki/refarch/modules,
+Pytest,adopt,languages & frameworks,,Ubiquitous framework for testing in Python. Must be in adopt. Sponsored by Heisenberg,
+Karate,assess,languages & frameworks,FALSE,Optix / Kitt to review/Findings? Sales and Catering Tushar M as well to sponsor,
+FastAPI,assess,languages & frameworks,FALSE,Sponsored by Heisenberg,
+Flask,assess,languages & frameworks,FALSE,Sponsored by Heisenberg,
+Pydantic,assess,languages & frameworks,FALSE,Sponsored by Heisenberg,
+Pandas,assess,languages & frameworks,FALSE,Sponsored by Heisenberg,
+Polars,assess,languages & frameworks,FALSE,Sponsored by Heisenberg,
+Kotlin,assess,languages & frameworks,FALSE,For backend development. Interoperable with existing Java libraries. Sponsored by RevPlan,
+AWS,adopt,platforms,FALSE,In the wiki/refarch/modules,
+ECR Security Scanning,adopt,platforms,FALSE,,
+Docker,adopt,platforms,FALSE,Platform team to sponsor. Already heavily used.,
+Event Bridge Scheduler,adopt,platforms,FALSE,Sponsored by Hawking Team. Appears to be covered in the existing module( https://ideasinc.atlassian.net/wiki/spaces/Platform/pages/4301226150/IDeaS+EventBridge+Module ),
+AWS Cognito,hold,platforms,FALSE,Move to UIS,
+RabbitMQ,hold,platforms,FALSE,Are we moving to Amazon MQ?  Do we want this for anything outside of Integrations? What is supported in China?,
+Cloud AMQP,hold,platforms,FALSE,,
+MongoDB/Atlas,hold,platforms,FALSE,,
+Apache HTTP Server,hold,platforms,FALSE,,
+Microsoft SQL Server,hold,platforms,FALSE,,
+Windows Stack,hold,platforms,FALSE,,
+NGINX,hold,platforms,FALSE,,
+VMware,hold,platforms,FALSE,,
+AWS Athena,hold,platforms,FALSE,Issues with scalability,
+Amazon MQ,adopt,platforms,FALSE,,
+Chatbot Assistants for Customer Help,trial,platforms,FALSE,Henry can identify a sponsor.  Change to adopt?, Move to adopt.  This is being implemented with G3 and Evolve
+Architecture Review / Collaboration,adopt,techniques,FALSE,With ARB,
+Scrum,adopt,techniques,FALSE,"Focus on Goals, Blockers vs whole day update. Rotation, Avoid scrum being used as an ""update to Lead/Manager""",
+Kanban,adopt,techniques,FALSE,,
+Evolutionary Architecture,adopt,techniques,FALSE,,One of the major DONTs that each team should follow is to attribute perf issues to EA. Basically each team should have beachmarks set for perf so that evolution can be certified
+Emergent Design,adopt,techniques,FALSE,,EA is about how your systems/app evolves(Top Down) vs ED is about how does your code evolve(Bottom Up).
+API First,adopt,techniques,FALSE,,We do not practic this.  Should we try to get in practices or move toward service first API approach.
+HA/Clustering First,adopt,techniques,FALSE,,Have we used it in any of the recent initiatives?
+Event Driven Architecture (for system integration),adopt,techniques,FALSE,,
+Branch by Abstraction,adopt,techniques,FALSE,In the wiki/refarch/modules,
+Zero-Downtime,adopt,techniques,FALSE,In the wiki/refarch/modules,
+Infrastructure as Code,adopt,techniques,FALSE,In the wiki/refarch/modules,
+Technology Radar,adopt,techniques,FALSE,In the wiki/refarch/modules,
+REST RMM2,adopt,techniques,FALSE,Managed by API Guild,
+Security/Penetration Testing,adopt,techniques,FALSE,,"Seems like this is a must, but we do not have a rigorous/complete way for handling this.  Should we identify a path/tool to provide this and assess that?"
+Exploratory Testing,adopt,techniques,FALSE,Primarily used by analytics,"Needs concrete definition needs to be added in the context of IDeaS, it is a very broader terms."
+Reactive Programming (Client),adopt,techniques,FALSE,,Are we using it in the new Evolve UI Arch?
+Data Contracts,assess,techniques,FALSE,With ARB,How different it is from API First? Are there any actual use cases where teams have found it useful than API First?
+DesignOps,assess,techniques,FALSE,,Which team is using it? Is ARB or SRB are synonymous to it? It can also relate to UI where shared compo are being used
+Standardized SonarQube Rules,hold,techniques,FALSE,Moving away from SONAR. DD Services to replace this,
+Long Running Tests in Branch Builds,hold,techniques,FALSE,,Remove?
+Environment for Performance Tests,hold,techniques,FALSE,Teams should use their existing stage env for performance tests,
+Service Mesh,hold,techniques,FALSE,,No one is using.  Remove?
+Domain Centric Data Storage,trial,techniques,FALSE,With ARB,Move from Trial to Assess or Adopt? Many services leverage storage and models for the work they are doing. Prove this out with Evolve?  We need to keep an eye out on data duplication and associated costs.
+Privacy By Design,trial,techniques,FALSE,,"In which areas of our products is this applicable as at high level we don’t collect PI data, do we?"
+Define Sponsors for New Blips,trial,techniques,FALSE,With ARB,
+Fade Blips after 1 year,trial,techniques,FALSE,Keep the RADAR focused on new tech and processes,
+GitHub,adopt,tools,FALSE,,Remove? Add to Wiki
+XRebel,adopt,tools,FALSE,,"Move to hold. Adoption is down, Jrebel is on hold"
+K6,adopt,tools,FALSE,Performance testing. Einstein as the sponsor,
+Artifactory Cloud,adopt,tools,FALSE,,Remove?
+Maven,adopt,tools,FALSE,,Remove?
+Studio 3T for MongoDB,adopt,tools,FALSE,,"Currently under license review, keep as adopt"
+Crowdin,adopt,tools,FALSE,,Used for translation
+Commvault for Backups,adopt,tools,FALSE,,
+SFDC for Sales and CRM,adopt,tools,FALSE,,
+Postman(For automation tests),adopt,tools,FALSE,,"I doubt we want this being used as licensed tool for automation, seems like more of a free ad hoc testing tool. (Move to Hold?)"
+Flyway for Database Migration,adopt,tools,FALSE,,Are there other tools/migration libraries that teams are using? Remove?
+Gradle,adopt,tools,FALSE,,Currently trying to standardize new work on Maven. (Move to Hold?)
+Storybook,adopt,tools,FALSE,,Need to sync with Dan/UI team on this - there was some movement away from this in favor of something more homegrown
+Dependabot,adopt,tools,FALSE,Platform team as sponsor,"Need to confirm with Brad if this is enabled by default and for teams already using it, is there any value or is it noise"
+AI Assistants for Engineers(CoPilot),adopt,tools,FALSE,Platform Team to Sponsor,
+Usage of AI in IDeaS Product Portfolio,adopt,tools,TRUE,Sponsored by Product Team. How do we want to proceed with this?  Do we need a generalized approach or just tooling to assist in specific areas? Assessing as part of Evolve,
+Checkmarx Zap,assess,tools,TRUE,Yes,
+Retreiveal Augmentied Generation  (RAG),assess,tools,TRUE,Sponsored by Ada,
+Mongock,hold,tools,FALSE,,
+Jenkins,hold,tools,FALSE,,"Nothing new should be on jenkins, G3 is almost gone. Remove?"
+JRebel,hold,tools,FALSE,,"Probably worth reviewing licenses to see how many we need, assuming adoption is low"
+CMA,hold,tools,FALSE,,
+SFDC for Anything But Sales,hold,tools,FALSE,,
+ServiceNow,hold,tools,FALSE,,
+Elastic Stack (ELK & Kibana),hold,tools,FALSE,"Was proposed as adopt, but we will continue to use Data Dog ",
+OpenTelemetry (alternative to Datadog Agent),trial,tools,FALSE,Einstein is sponsoring,
+n8n,trial,tools,TRUE,Einstein to investigate,
